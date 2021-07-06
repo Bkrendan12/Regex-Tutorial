@@ -31,8 +31,9 @@ Which would look for anytime the combination of the word "tree" is used in the s
 ```
 each example will be referring to using a Regex testing application such as:
 
-[regexr](https://regexr.com/)
 ```
+
+[regexr](https://regexr.com/)
 
 ## Table of Contents
 
