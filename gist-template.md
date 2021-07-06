@@ -1,10 +1,22 @@
-# Title (replace with your title)
+# Regular Expression Review
 
-Introductory paragraph (replace this with your text)
+In this review for Regex, also known as Regular Expressions, we will go over writing your own regular expressions that you can impliment into your own projects.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regex is a way of setting specific parameters the user can use when entering into an input field. In a way, we're setting rules for the user of what they can and cannot use in a certain input such as a form. A good example is making sure when a user enters a phone number, we would ask for 3 numbers, a dash, 3 more numbers, a dash and lastly, 4 numbers. This would get us the area code and the 7 digit phone number.
+
+A code snippet for this example would look like:
+
+/\d*{3}-\d*{3}-\d\*{4}/
+
+603-123-4567
+
+- the first group requires any 3 digits
+- a dash
+- the second group requires any 3 digits
+- a dash
+- the third group requires any 4 digits
 
 ## Table of Contents
 
