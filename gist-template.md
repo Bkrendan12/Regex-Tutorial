@@ -19,12 +19,13 @@ would ask for 3 numbers, a dash, 3 more numbers, a dash and lastly,
 
 A code snippet for this example would look like:
 
+```
 /\d*{3}-\d*{3}-\d\*{4}/
+```
 
 **603-123-4567**
 
 ```
-
 - the first group requires any 3 digits
 - a dash
 - the second group requires any 3 digits
