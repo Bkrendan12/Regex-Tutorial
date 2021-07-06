@@ -8,15 +8,23 @@ Regex is a way of setting specific parameters the user can use when entering int
 
 A code snippet for this example would look like:
 
-/\d*{3}-\d*{3}-\d\*{4}/
+**/\d*{3}-\d*{3}-\d\*{4}/**
 
-603-123-4567
+**603-123-4567**
 
 - the first group requires any 3 digits
 - a dash
 - the second group requires any 3 digits
 - a dash
 - the third group requires any 4 digits
+
+A simpler code snippet example would be something as easy as:
+
+/tree/g
+
+I sat on a **tree** drinking a pint glass of **tree**vana (**treevana**)
+
+Which would look for anytime the combination of the word "tree" is used in the string/text/input. It would find the word "tree" no matter where it is. Whether it's the word on its own or in another word such as "treevana".
 
 ## Table of Contents
 
