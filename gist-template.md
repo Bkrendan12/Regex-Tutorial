@@ -1,7 +1,7 @@
-# Regular Expression Review
+# Regular Expression Overview
 
 ```
-In this review for Regex, also known as Regular Expressions, we will go
+In this overview for Regex, also known as Regular Expressions, we will go
 over writing your own regular expressions that you can impliment into
 your own projects.
 ```
@@ -34,11 +34,11 @@ A code snippet for this example would look like:
 
 A simpler code snippet example would be something as easy as:
 
-```
-/tree/g
+**/tree/g**
 
 I sat on a **_tree_** drinking a pint glass of **_tree_** vana (**treevana**)
 
+```
 Which would look for anytime the combination of the word "tree" is
 used in the string/text/input. It would find the word "tree" no matter
 where it is. Whether it's the word on its own or in another word such
@@ -48,9 +48,7 @@ as "treevana".
 ## Preface
 
 ```
-each example will be referring to using a Regex testing application
-such as:
-
+Each example will be referring to using a Regex testing application such as:
 ```
 
 [regexr.com](https://regexr.com/)
@@ -84,7 +82,6 @@ as opposed to finding it somewhere in the text.
 ### Quantifiers
 
 ```
-
 {#} (for example, {3} or {10}) looks for that # of the preceding token.
 For example, if we wanted to match a phone number, we could use the regex
  /\d*{3}-\d*{3}-\d*{4}/ to match 3 digits, a dash, 3 digits, a dash, and
@@ -92,20 +89,17 @@ For example, if we wanted to match a phone number, we could use the regex
  the preceding token. For example, if we wanted to match between 3 and 4
  digits, we could use the regex /\d{3,4}/.+ matches at least one of the
  preceding token, and * matches 0 or more.
-
 ```
 
 ### Grouping Constructs
 
 ```
-
 Capture groups are denoted by parentheses and can be referenced later
 in order to extract the information they enclose. For example, if we
 wanted to capture the first 3 digits in our earlier phone number example,
 we could use the regex /(\d*{3})-\d*{3}-\d*{4}/. Class sets are groups
 denoted by square brackets. For example, if we wanted to match either
 a digit or a lower case letter, we could use the regex /[0-9a-z]/.
-
 ```
 
 ### Character Classes
@@ -117,20 +111,17 @@ digits \d, whitespace \s and words \w
 \d **digits**  [0-9] includes all digits from all scripts
 \w **wordcharacter**   [A-Za-z0-9_] matches the ASCII characters
 \s **whitespace** [\t\r\n\f] matches space, a tab, a carriage return, a line feed
-
 ```
 
 ### Bracket Expressions
 
 ```
-
 A bracket expression is a list of characters enclosed by [brackets].
 It matches any single character in that list. If the first character
 of the list is the ‘^’ symbol, then it matches any character not in
 the list. The regular expression ‘[0123456789]’ matches any single
 digit. A hyphen creates a range, and a caret at the start negates
 the bracket expression.
-
 ```
 
 ### The OR Operator
@@ -154,24 +145,47 @@ Test string:
 
 Only the word red and blue will be highlighted. Green won't be
 highlighted because we didn't include it in our regular expression.
-
 ```
 
 ### Flags
 
 ```
-
 Global Flag
 
 The g flag on a regex expression causes the regex to match every instance
 of the text that matches our regex. You can also just match against the
 first instance of text that matched our regex.
-
 ```
 
 ### Character Escapes
 
+```
+Character Escapes are used with backslashes. It's easy at first to think you
+only use the backslash to ESCAPE something in a search but you also use it to
+"bring" so the character escape will bring and escape. In order to use a
+literal backslash anywhere in a regex, it must be escaped by another backslash.
+
+There are several characters that need to be escaped to be taken literally (at least outside char classes):
+
+* Brackets: []
+* Parentheses: ()
+* Curly braces: {}
+* Operators: *, +, ?, |
+* Anchors: ^, $
+* Others: ., \
+
+In order to use a literal ^ at the start or a literal $ at the end of a regex, the character must be escaped.
+```
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile
-(replace with your information and a link to your profile)
+This Overview on **_Regular Expressions_** was written by myself, Brendan Kurylo,
+a junior web developer from Southern New Hampshire.
+
+You can find a copy of the .gist version at my github at:
+
+**[Regular Expressions .gist](https://github.com/Bkrendan12/Regex-Tutorial/blob/master/gist-template.md)**
+
+**[Regular Expressions git repo](https://github.com/Bkrendan12/Regex-Tutorial)**
+
+**[My Github](https://github.com/Bkrendan12)**
