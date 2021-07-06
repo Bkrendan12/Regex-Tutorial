@@ -26,6 +26,14 @@ I sat on a **_tree_** drinking a pint glass of **_tree_** vana (**treevana**)
 
 Which would look for anytime the combination of the word "tree" is used in the string/text/input. It would find the word "tree" no matter where it is. Whether it's the word on its own or in another word such as "treevana".
 
+## Preface
+
+```
+each example will be referring to using a Regex testing application such as:
+
+[regexr](https://regexr.com/)
+```
+
 ## Table of Contents
 
 - [Anchors](#anchors)
@@ -67,11 +75,47 @@ Class sets are groups denoted by square brackets. For example, if we wanted to m
 
 ```
 
-### Bracket Expressions
-
 ### Character Classes
 
+```
+Character classes are only used for finding digits \d, whitespace \s and words \w
+
+\d **digits**  [0-9] includes all digits from all scripts
+\w **wordcharacter**   [A-Za-z0-9_] matches the ASCII characters
+\s **whitespace** [\t\r\n\f] matches space, a tab, a carriage return, a line feed
+
+```
+
+### Bracket Expressions
+
+```
+
+A bracket expression is a list of characters enclosed by [brackets]. It matches any single character in that list. If the first character of the list is the ‘^’ symbol, then it matches any character not in the list. The regular expression ‘[0123456789]’ matches any single digit. A hyphen creates a range, and a caret at the start negates the bracket expression.
+
+```
+
 ### The OR Operator
+
+```
+OR is a logic term used to provide selection choice from multiple choices.
+If we want to look for specified words we set in the regular expression,
+we can place 3 words for example inside of paranthesis split with the "|" symbol
+saying "we are looking for this word or this word or this word".
+
+Regular Expression:
+
+* /(red | blue | yellow)
+
+Test string:
+
+* I like the color red
+* I like the color blue
+* I like the color green
+
+Only the word red and blue will be highlighted. Green won't be highlighted because
+we didn't include it in our regular expression.
+
+```
 
 ### Flags
 
