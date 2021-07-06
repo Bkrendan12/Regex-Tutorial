@@ -1,8 +1,10 @@
 # Regular Expression Review
 
+```
 In this review for Regex, also known as Regular Expressions, we will go
 over writing your own regular expressions that you can impliment into
 your own projects.
+```
 
 ## Summary
 
