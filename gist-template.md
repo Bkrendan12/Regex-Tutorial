@@ -255,6 +255,4 @@ You can find a copy of the .gist version at my github at:
 
 **[Regular Expressions .gist](https://github.com/Bkrendan12/Regex-Tutorial/blob/master/gist-template.md)**
 
-**[Regular Expressions git repo](https://github.com/Bkrendan12/Regex-Tutorial)**
-
 **[My Github](https://github.com/Bkrendan12)**
