@@ -78,18 +78,22 @@ $ on the end makes it so that the text we're matching against must
 exactly match our regex expression, as opposed to finding it somewhere
 in the text.
 
-```
 Not using ^ anchors:
 
+```
 [1, 5, 10]
 12345678910
 only the 1, 5 and 10 will be allowed
+```
 
 Using ^ Anchors
+
+```
 [^1, 5, 10]
 12345678910
-each number other than 1, 5 and 10 will be allowed
 ```
+
+each number other than 1, 5 and 10 will be allowed
 
 ### Quantifiers
 
@@ -125,9 +129,19 @@ matches at least one of the preceding token, and \* matches 0 or more.
 Capture groups are denoted by parentheses and can be referenced later
 in order to extract the information they enclose. For example, if we
 wanted to capture the first 3 digits in our earlier phone number example,
-we could use the regex /(\d*{3})-\d*{3}-\d\*{4}/. Class sets are groups
+we could use the regex
+
+```
+ /(\d*{3})-\d*{3}-\d\*{4}/.
+```
+
+Class sets are groups
 denoted by square brackets. For example, if we wanted to match either
-a digit or a lower case letter, we could use the regex /[0-9a-z]/.
+a digit or a lower case letter, we could use the regex
+
+```
+/[0-9a-z]/.
+```
 
 ### Character Classes
 
@@ -138,9 +152,9 @@ digits \d, whitespace \s and words \w
 \w **wordcharacter** [A-Za-z0-9_] matches the ASCII characters
 \s **whitespace** [\t\r\n\f] matches space, a tab, a carriage return, a line feed
 
-```
 Example of digits \d:
 
+```
 [0-9] is the same as \d
 ```
 
@@ -152,6 +166,22 @@ of the list is the ‘^’ symbol, then it matches any character not in
 the list. The regular expression ‘[0123456789]’ matches any single
 digit. A hyphen creates a range, and a caret at the start negates
 the bracket expression.
+
+Example:
+
+```
+Finding any number 0 - 99
+
+\b([0-9]|[1-9][0-9])\b
+```
+
+Broken Down:
+
+```
+1. 0 to 9 --> [0-9]
+
+2. 10 to 99 --> [1-9][0-9]
+```
 
 ### The OR Operator
 
@@ -185,13 +215,13 @@ These are tokens that modify the behavior of searching. We can use these to make
 some popular examples of flags include:
 
 ```
-- Ignore Casing "/i" Makes an expression search case-insensitive.
+- Ignore Casing "/i" makes an expression search case-insensitive.
 
-- Global "/g" Makes an expression search for all occurrences.
+- Global "/g" makes an expression search for all occurrences.
 
-- Dot All "/s" Makes the wild-character "." match new lines as well.
+- Dot All "/s" makes the wild-character "." match new lines as well.
 
-- Multiline "/m" Makes the boundary characters "^" and "$" match
+- Multiline "/m" makes the boundary characters "^" and "$" match
   the beginning and ending of every single line instead of the beginning
   and ending of the whole string.
 ```
@@ -203,7 +233,7 @@ only use the backslash to ESCAPE something in a search but you also use it to
 "bring" so the character escape will bring and escape. In order to use a
 literal backslash anywhere in a regex, it must be escaped by another backslash.
 
-There are several characters that need to be escaped to be taken literally (at least outside char classes):
+There are several characters that need to be escaped to be taken literally (at least outside character classes):
 
 ```
 * Brackets: []
